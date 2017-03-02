@@ -13,7 +13,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $routeProvider.when('/home', {
         templateUrl: 'home/home.html',
         controller: 'homeCtrl'
-    }).when('/family', {
+    }).when('/myfamily', {
         templateUrl: 'family/family.html',
         controller: 'familyCtrl'
     }).when('/friends', {
