@@ -80,9 +80,10 @@ body {
 .menuTab {
     position: absolute;
     bottom: 0;
-    background-color: #00AEF0;
+    background-color: gainsboro;
     width: 100%;
     height: 10%;
+    overflow: hidden;
 }
 
 .menu {
@@ -91,6 +92,8 @@ body {
     margin-bottom: 2em;
     padding: 0 0 0.5em;
 }
+
+
 
 .menu:before {
     content: "[";
