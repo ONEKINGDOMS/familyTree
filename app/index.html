@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Family Tree App</title>
+  <title>Family Tree</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -19,22 +19,22 @@
 </head>
 <body>
   <div ng-view class="mockScreen"></div>
-  <div class="menuTab" role="group" aria-label="...">
+  <div class="menuTab" role="group">
     <div class="row">
-      <div class="col-md-15 col-sm-15  col-xs-15 text">
-        <a href="#/home"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+      <div class="col-md-15 col-sm-15  col-xs-15 tab">
+        <a href="#/home"> <div><i class="fa fa-home" aria-hidden="true"></i></div><div>Home</div></a>
       </div>
-      <div class="col-md-15 col-sm-15  col-xs-15 text">
-        <a><i class="fa fa-users" aria-hidden="true"></i> Family</a>
+      <div class="col-md-15 col-sm-15  col-xs-15 tab">
+        <a href="#/myfamily"> <div><i class="fa fa-users" aria-hidden="true"></i></div>  <div>Family</div></a>
       </div>
-      <div class="col-md-15 col-sm-15 col-xs-15 text">
-        <a><i class="fa fa-users" aria-hidden="true"></i>Friends</a>
+      <div class="col-md-15 col-sm-15 col-xs-15 tab">
+        <a href="#/friends"> <div><i class="fa fa-users" aria-hidden="true"></i></div><div>Friends</div></a>
       </div>
-      <div class="col-md-15 col-sm-15 col-xs-15 text">
-        <a><i class="fa fa-user-plus" aria-hidden="true"></i>Message</a>
+      <div class="col-md-15 col-sm-15 col-xs-15 tab">
+        <a href="#/chats"><div><i class="fa fa-user-plus" aria-hidden="true"></i></div><div>Message</div></a>
       </div>
-      <div class="col-md-15 col-sm-15 col-xs-15 text">
-        <a><i class="fa fa-cog" aria-hidden="true"></i>Setting</a>
+      <div class="col-md-15 col-sm-15 col-xs-15 tab">
+        <a href="#/settings"><div><i class="fa fa-cog" aria-hidden="true"></i></div><div>Setting</div></a>
       </div>
     </div>
   </div>
@@ -44,10 +44,10 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
-  <script src="home/homeCtrl.js"></script>
-  <script src="family/familyCtrl.js"></script>
-  <script src="friends/friendsCtrl.js"></script>
-  <script src="chats/chatsCtrl.js"></script>
-  <script src="settings/settingsCtrl.js"></script>
+  <script src="controller/homeCtrl.js"></script>
+  <script src="controller/familyCtrl.js"></script>
+  <script src="controller/friendsCtrl.js"></script>
+  <script src="controller/chatsCtrl.js"></script>
+  <script src="controller/settingsCtrl.js"></script>
 </body>
 </html>

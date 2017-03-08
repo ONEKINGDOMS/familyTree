@@ -11,19 +11,19 @@ angular.module('familyTree', [
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $routeProvider.when('/home', {
-        templateUrl: 'home/home.html',
+        templateUrl: 'template/home.html',
         controller: 'homeCtrl'
     }).when('/myfamily', {
-        templateUrl: 'family/family.html',
+        templateUrl: 'template/family.html',
         controller: 'familyCtrl'
     }).when('/friends', {
-      templateUrl: 'friends/friends.html',
+      templateUrl: 'template/friends.html',
       controller: 'friendsCtrl'
   }).when('/chats', {
-      templateUrl: 'chats/chats.html',
+      templateUrl: 'template/chats.html',
       controller: 'chatsCtrl'
   }).when('/settings', {
-      templateUrl: 'settings/settings.html',
+      templateUrl: 'template/settings.html',
       controller: 'settingsCtrl'
   }).otherwise({redirectTo: '/home'});
 }]);
