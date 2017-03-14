@@ -1,7 +1,8 @@
+(function (angular) {
 'use strict';
 
 angular.module('familyTree.friends', ['ngRoute'])
-    .controller('friendsCtrl', ['$scope','$q',function($scope,$q) {
+    .controller('friendsCtrl', ['$scope','$q','breadcrumbs',function($scope,$q,breadcrumbs) {
 
         var friendsCtrl=function () {
             this.init();
@@ -9,6 +10,7 @@ angular.module('familyTree.friends', ['ngRoute'])
 
         friendsCtrl.prototype.init=function(){
             var that=this;
+            breadcrumbs.setTitle('Friends');
             that.friendList=[{
                 id:'1',
                 name:'Uen Yu',
@@ -60,4 +62,5 @@ angular.module('familyTree.friends', ['ngRoute'])
         return new friendsCtrl();
 
 
-    }]);
+    }])
+}(angular))

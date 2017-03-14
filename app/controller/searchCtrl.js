@@ -1,7 +1,8 @@
+(function (angular) {
 'use strict';
 
 angular.module('familyTree.search', ['ngRoute'])
-    .controller('searchCtrl', ['$location',function($location) {
+    .controller('searchCtrl', ['$location','breadcrumbs',function($location,breadcrumbs) {
 
         var searchCtrl=function () {
             this.init();
@@ -9,7 +10,8 @@ angular.module('familyTree.search', ['ngRoute'])
 
         searchCtrl.prototype.init=function () {
             var that=this;
-
+            breadcrumbs.setTitle('Search');
+            that.searchBy=$location.search().searchBy;
         }
 
         searchCtrl.prototype.search=function () {
@@ -18,4 +20,5 @@ angular.module('familyTree.search', ['ngRoute'])
 
 
         return new searchCtrl();
-    }]);
+    }])
+}(angular))

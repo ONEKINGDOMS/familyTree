@@ -1,7 +1,5 @@
-<div class="title">
-    <span>{{title}}</span>
-</div>
-<div class="content" ng-controller="friendsCtrl as friends">
+<div  ng-controller="friendsCtrl as friends">
+    <ftree-header></ftree-header>
     <div class="row"  ng-repeat="friend in friends.friendList" style="background-color: ghostwhite">
         <div class="col-md-2 col-sm-2 col-xs-2">
             <img class="img-circle" height="40px" src="{{friend.profile}}"/>

@@ -1,7 +1,7 @@
 /* app css stylesheet */
 
 body {
-    background: white
+    background: rgb(246, 245, 250);
 }
 
 
@@ -15,6 +15,7 @@ body {
 .img-circle {
     border-radius: 50%;
 }
+
 
 
 .center{
@@ -81,6 +82,13 @@ body {
 }
 
 
+.title{
+    font-size: 30px;
+    text-align: center;
+    background-color: #00b38b;
+    color: snow;
+}
+
 
 .menu:before {
     content: "[";
@@ -116,4 +124,9 @@ body {
 .content{
     margin-top: 50px;
     margin-bottom: 30px;
+    padding: 20px;
+}
+
+.nav-list{
+    margin-left: 20px;
 }

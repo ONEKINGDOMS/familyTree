@@ -1,7 +1,8 @@
+(function (angular) {
 'use strict';
 
 angular.module('familyTree.chats', ['ngRoute'])
-    .controller('chatsCtrl', ['$q',function($q) {
+    .controller('chatsCtrl', ['$q','breadcrumbs',function($q,breadcrumbs) {
 
         var chatsCtrl=function () {
             this.init();
@@ -9,6 +10,7 @@ angular.module('familyTree.chats', ['ngRoute'])
 
         chatsCtrl.prototype.init=function () {
             var that=this;
+            breadcrumbs.setTitle('Chats');
             that.sessionList=[{
                 id:'1',
                 user:{
@@ -69,4 +71,4 @@ angular.module('familyTree.chats', ['ngRoute'])
 
         return new chatsCtrl();
 
-    }]);
+    }])}(angular))
