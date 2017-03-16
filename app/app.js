@@ -4,6 +4,7 @@
 // Declare app level module which depends on views, and components
 angular.module('familyTree', [
     'ngRoute',
+    'ui.bootstrap',
     'familyTree.home',
     'familyTree.family',
     'familyTree.friends',

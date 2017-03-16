@@ -12,6 +12,18 @@
                 breadcrumbs.setTitle('Setting');
             };
 
+            //change Found status
+            settingsCtrl.prototype.changeFoundStatus=function () {
+
+            };
+
+            //log out
+            settingsCtrl.prototype.logout=function () {
+
+            };
+
+
+
             return new settingsCtrl();
         }])
 }(angular))

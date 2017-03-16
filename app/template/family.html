@@ -1,4 +1,4 @@
-<div  ng-controller="familyCtrl as family"></div>
+<div  ng-controller="familyCtrl as family">
 <ftree-header></ftree-header>
 <div class="row content">
     <div class="col-md-4 col-sm-4 col-xs-4 content">
@@ -8,7 +8,7 @@
                 {{family.user.name}}
             </div>
             <div>
-                <a class="btn btn-info btn-lg btn-block" ng-click="family.addNewMember()">Add</a>
+                <a  id="addNewMember" class="btn btn-info btn-sm" ng-click="addNewMember()">Add</a>
             </div>
         </div>
     </div>
@@ -29,4 +29,5 @@
             </li>
         </ul>
     </div>
+</div>
 </div>

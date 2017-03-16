@@ -1,1 +1,12 @@
+<div ng-controller="settingsCtrl as settings"></div>
 <ftree-header></ftree-header>
+<div class="row content">
+    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3 text">
+        <div class="row">
+            <label>Will not be Found by anyone</label>
+            <input type='checkbox' class='ios8-switch ios8-switch-lg' id='checkbox-1' hidden ng-model="settings.shouldBeFound" ng-click="settings.changeFoundStatus()">
+            <label for='checkbox-1'></label></div>
+        <br><br>
+        <button type="button" class="btn btn-danger" ng-click="settings.logout()">Log out</button>
+    </div>
+</div>
