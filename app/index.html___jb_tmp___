@@ -53,6 +53,5 @@
   <script src="controller/chatsCtrl.js"></script>
   <script src="controller/settingsCtrl.js"></script>
   <script src="controller/searchCtrl.js"></script>
-  <script src="controller/modalCtrl.js"></script>
 </body>
 </html>

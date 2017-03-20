@@ -16,7 +16,7 @@ angular.module('familyTree.family', ['ngRoute'])
     };
 
 
-    $scope.addNewMember = function () {
+    familyCtrl.prototype.addNewMember = function () {
         var that=this;
         var parentElem =
             angular.element($document[0].querySelector('#addNewMember'));
@@ -26,13 +26,12 @@ angular.module('familyTree.family', ['ngRoute'])
             ariaDescribedBy: 'modal-body',
             templateUrl: 'template/memberModal.html',
             controller: function ($uibModalInstance,user) {
-                var that = this;
-                that.user = user;
-                that.confirm = function () {
-
-                };
-                that.cancel = function () {
+                $scope.user = user;
+                $scope.confirm = function () {
                     $uibModalInstance.close();
+                };
+                $scope.cancel = function () {
+                    $uibModalInstance.dismiss('cancel');
                 };
             },
             size: 'lg',
