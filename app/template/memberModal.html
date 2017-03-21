@@ -3,77 +3,72 @@
 </div>
 <div class="modal-body" id="modal-body">
     <div class="row">
-        <label for="inputFamilyName" class="col-sm-2 control-label col-xs-2">FamilyName</label>
+        <span class="col-md-6">
+         <label for="inputFamilyName" class="col-md-3 col-xs-3">FamilyName</label>
         <div class="col-sm-4 col-xs-4">
-            <input type="text" id="inputFamilyName" placeholder="FamilyName">
+            <input type="text" id="inputFamilyName"  class="form-control" placeholder="FamilyName">
         </div>
-    </div>
-    <div class="row">
-        <label for="inputFirstName" class="col-sm-2 control-label col-xs-2">FirstName</label>
+        </span>
+        <span class="col-md-6">
+                  <label for="inputFirstName" class="col-md-3 col-xs-3">FirstName</label>
         <div class="col-sm-4 col-xs-4">
-            <input type="text" id="inputFirstName" placeholder="FirstName">
+            <input type="text" id="inputFirstName"  class="form-control" placeholder="FirstName">
         </div>
+        </span>
     </div>
 
-    <!--<form>-->
-        <!--<div class="form-group col-md-6">-->
-            <!--<label for="inputFamilyName" class="col-sm-2 control-label">FamilyName</label>-->
-            <!--<div class="col-sm-5">-->
-                <!--<input type="text" class="form-control" id="inputFamilyName" placeholder="FamilyName">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group col-md-6">-->
-            <!--<label for="inputFirstName" class="col-sm-2 control-label">FirstName</label>-->
-            <!--<div class="col-sm-10">-->
-                <!--<input type="text" class="form-control" id="inputFirstName" placeholder="FirstName">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group col-md-6">-->
-            <!--<div class="col-sm-offset-2 col-sm-10">-->
-                <!--<div class="checkbox">-->
-                    <!--<label>-->
-                        <!--<input type="radio">Male-->
-                    <!--</label>-->
-                    <!--<label>-->
-                        <!--<input type="radio">FeMale-->
-                    <!--</label>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group col-md-6">-->
-            <!--<div class="col-sm-offset-2 col-sm-10">-->
-                <!--<div class="checkbox">-->
-                    <!--<label>-->
-                        <!--<input type="radio">Live-->
-                    <!--</label>-->
-                    <!--<label>-->
-                        <!--<input type="radio">Died-->
-                    <!--</label>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group col-md-12">-->
-        <!--<label for="sel1">Select list:</label>-->
-        <!--<select class="form-control col-md-3" id="sel1">-->
-            <!--<option>1</option>-->
-            <!--<option>2</option>-->
-            <!--<option>3</option>-->
-            <!--<option>4</option>-->
-        <!--</select>-->
-        <!--</div>-->
-        <!--<div class="form-group col-md-6">-->
-            <!--<label for="inputDate" class="col-sm-2 control-label">Born Date</label>-->
-            <!--<div class="col-sm-10">-->
-                <!--<input type="datetime" class="form-control" id="inputDate" placeholder="FirstName">-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group col-md-6">-->
-            <!--<label for="inputBirthPlace" class="col-sm-2 control-label">BirthPlace</label>-->
-            <!--<div class="col-sm-10">-->
-                <!--<input type="text" class="form-control" id="inputBirthPlace" placeholder="BirthPlace">-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</form>-->
+
+
+    <div class="row">
+        <span class="col-md-6">
+            <label  class="col-md-3 col-xs-3">Gender</label>
+        <div class="col-sm-4 col-xs-4">
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+        </div>
+        </span>
+        <span class="col-md-6">
+            <label class="col-md-3 col-xs-3">Status</label>
+        <div class="col-sm-4 col-xs-4">
+             <input type="radio" name="gender" value="male"> Live<br>
+             <input type="radio" name="gender" value="female"> Died<br>
+        </div>
+        </span>
+    </div>
+
+    <div class="row">
+        <span class="col-md-8">
+         <label class="col-md-3">RelationShip</label>
+         <div class="col-sm-6 col-xs-6">
+           <select class="form-control">
+                <option>Father</option>
+                 <option>Mother</option>
+                 <option>Couple</option>
+                 <option>Children</option>
+           </select>
+         </div>
+        </span>
+    </div>
+
+    <div class="row">
+        <span class="col-md-6">
+                  <label for="inputBirthPlace" class="col-md-3 col-xs-3">BirthDare</label>
+            <div class="col-md-8 col-xs-8">
+                <p  class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="modal.popup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                    <span class="input-group-btn">
+                     <button type="button" class="btn btn-default" ng-click="modal.open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+        </span>
+        <span class="col-md-6">
+                  <label for="inputBirthPlace" class="col-md-3 col-xs-3">BirthPlace</label>
+        <div class="col-md-6 col-xs-6">
+            <input type="text" id="inputBirthPlace"  class="form-control" placeholder="BirthPlace">
+        </div>
+        </span>
+    </div>
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" type="button" ng-click="modal.confirm()">OK</button>

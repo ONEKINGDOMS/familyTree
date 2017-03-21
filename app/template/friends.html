@@ -4,7 +4,7 @@
         <div class="col-md-2 col-sm-2 col-xs-2">
             <img class="img-circle" height="40px" src="{{friend.profile}}"/>
         </div>
-        <div class="col-md-10 col-sm-10 col-xs-10">
+        <div class="col-md-8 col-sm-8 col-xs-8">
             <div>
                 {{friend.name}}
             </div>
@@ -12,6 +12,10 @@
                 {{friend.position}}
             </div>
             <hr>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-2" ng-if="friends.isSearch == 1">
+             <a class="btn btn-default btn-sm"> greeting</a>
         </div>
     </div>
 </div>

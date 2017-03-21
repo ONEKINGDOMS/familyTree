@@ -2,13 +2,16 @@
 <ftree-header></ftree-header>
 <div class="row content">
     <div class="col-md-4 col-sm-4 col-xs-4 content">
+        <div class="col-md-6">
         <img class="img-circle" ng-src="../static/profile.jpg"/>
-        <div>
+        </div>
+        <div class="col-md-6">
             <div>
                 {{family.user.name}}
             </div>
+            <br>
             <div>
-                <a  id="addNewMember" class="btn btn-info btn-sm" ng-click="family.addNewMember()">Add</a>
+                <a id="addNewMember" class="btn btn-info btn-sm" ng-click="family.addNewMember()">Add</a>
             </div>
         </div>
     </div>

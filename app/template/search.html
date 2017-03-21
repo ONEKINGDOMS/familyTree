@@ -1,53 +1,55 @@
 <div ng-controller="searchCtrl as search">
     <ftree-header></ftree-header>
-    <div class="title">
-        <span>{{title}}</span>
-    </div>
-    <div class="row">
-        {{terms}}
-    </div>
-    <div class="row" ng-if="search.searchBy == 0" class="searchFrom">
-        <div class="form-group col-sm-8  col-sm-offset-2">
-            <label for="inputHomeTown" class="col-sm-5 control-label">Home Town:</label>
-            <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputHomeTown" >
-            </div>
-            <label for="inputTitle" class="col-sm-5 control-label">xxx:</label>
-            <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputTitle" >
-            </div>
-            <label for="inputRole" class="col-sm-5 control-label">xxx:</label>
-            <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputRole" >
-            </div>
-            <label for="inputSearchTitle" class="col-sm-5 control-label">xxx:</label>
-            <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputSearchTitle" >
+    <div class="modal-body">
+        <div class="title">
+            <span>{{title}}</span>
+        </div>
+        <div class="row">
+            {{terms}}
+        </div>
+        <div class="row" ng-if="search.searchBy == 0" class="searchFrom">
+            <div class="form-group col-sm-8  col-sm-offset-2">
+                <label for="inputHomeTown" class="col-sm-5 control-label">Home Town:</label>
+                <div class="col-sm-7">
+                    <input type="textbox" class="form-control" id="inputHomeTown" >
+                </div>
+                <label for="inputTitle" class="col-sm-5 control-label">xxx:</label>
+                <div class="col-sm-7">
+                    <input type="textbox" class="form-control" id="inputTitle" >
+                </div>
+                <label for="inputRole" class="col-sm-5 control-label">xxx:</label>
+                <div class="col-sm-7">
+                    <input type="textbox" class="form-control" id="inputRole" >
+                </div>
+                <label for="inputSearchTitle" class="col-sm-5 control-label">xxx:</label>
+                <div class="col-sm-7">
+                    <input type="textbox" class="form-control" id="inputSearchTitle" >
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row" ng-if="search.searchBy == 1" class="searchFrom">
-        <div class="form-group col-sm-8  col-sm-offset-2">
-            <label for="inputSchoolType" class="col-sm-5 control-label">School Type:</label>
-            <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputSchoolType" placeholder="primary/junior high/seinor high">
-            </div>
-            <label for="inputSchoolAddress" class="col-sm-5 control-label">School Address:</label>
-            <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputSchoolAddress" placeholder="primary/junior high/seinor high">
-            </div>
-            <label for="inputSchoolName" class="col-sm-5 control-label">School name:</label>
-            <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputSchoolName" placeholder="primary/junior high/seinor high">
+        <div class="row" ng-if="search.searchBy == 1" class="searchFrom">
+            <div class="form-group col-sm-8  col-sm-offset-2">
+                <label for="inputSchoolType" class="col-sm-5 control-label">School Type:</label>
+                <div class="col-sm-7">
+                    <input type="textbox" class="form-control" id="inputSchoolType" placeholder="primary/junior high/seinor high">
+                </div>
+                <label for="inputSchoolAddress" class="col-sm-5 control-label">School Address:</label>
+                <div class="col-sm-7">
+                    <input type="textbox" class="form-control" id="inputSchoolAddress" placeholder="primary/junior high/seinor high">
+                </div>
+                <label for="inputSchoolName" class="col-sm-5 control-label">School name:</label>
+                <div class="col-sm-7">
+                    <input type="textbox" class="form-control" id="inputSchoolName" placeholder="primary/junior high/seinor high">
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="row content">
-        <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5 text">
-            <a class="btn btn-warning btn-block">
-               Search
-            </a>
+        <div class="row content">
+            <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5 text">
+                <a class="btn btn-warning btn-block" href="#/friends?isSearch=1">
+                    Search
+                </a>
+            </div>
         </div>
     </div>
 </div>
