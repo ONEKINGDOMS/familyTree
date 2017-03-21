@@ -63,4 +63,4 @@ angular.module('familyTree.friends', ['ngRoute'])
 
 
     }])
-}(angular))
+}(angular));

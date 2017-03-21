@@ -1,48 +1,41 @@
-'use strict';
+(function (angular) {
 
-angular.module('familyTree.family', ['ngRoute'])
-.controller('familyCtrl', ['breadcrumbs','$document','$uibModal','$log','$scope',function(breadcrumbs,$document,$uibModal,$log,$scope) {
+    'use strict';
 
-    var familyCtrl=function () {
-        this.init();
-    };
+    angular.module('familyTree.family', ['ngRoute'])
+        .controller('familyCtrl', ['breadcrumbs', '$document', '$uibModal', '$log', '$scope', function (breadcrumbs, $document, $uibModal, $log, $scope) {
 
-    familyCtrl.prototype.init=function(){
-        var that=this;
-        breadcrumbs.setTitle('Family');
-        that.user={
-            name:'Liu',
-        };
-    };
+            var familyCtrl = function () {
+                this.init();
+            };
 
-
-    $scope.addNewMember = function () {
-        var that=this;
-        var parentElem =
-            angular.element($document[0].querySelector('#addNewMember'));
-        var modalInstance = $uibModal.open({
-            animation: true,
-            ariaLabelledBy: 'modal-title',
-            ariaDescribedBy: 'modal-body',
-            templateUrl: 'template/memberModal.html',
-            controller: function ($uibModalInstance,user) {
+            familyCtrl.prototype.init = function () {
                 var that = this;
-                that.user = user;
-                that.confirm = function () {
-
+                breadcrumbs.setTitle('Family');
+                that.user = {
+                    name: 'Liu',
                 };
-                that.cancel = function () {
-                    $uibModalInstance.close();
-                };
-            },
-            size: 'lg',
-            resolve: {
-                user: function () {
-                    return that.user;
-                }
-            }
-        });
-    };
+            };
 
-    return new familyCtrl();
-}]);
+
+            familyCtrl.prototype.addNewMember = function () {
+                var that = this;
+                 $uibModal.open({
+                    animation: true,
+                    ariaLabelledBy: 'modal-title',
+                    ariaDescribedBy: 'modal-body',
+                    templateUrl: 'template/memberModal.html',
+                    controller:'modalCtrl',
+                     controllerAs:'modal',
+                    size: 'lg',
+                    resolve: {
+                        user: function () {
+                            return that.user;
+                        }
+                    }
+                });
+            };
+
+            return new familyCtrl();
+        }])
+})(angular);

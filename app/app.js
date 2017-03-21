@@ -11,15 +11,16 @@ angular.module('familyTree', [
     'familyTree.chats',
     'familyTree.settings',
     'familyTree.search',
-    'familyTree.common'
+    'familyTree.common',
+    'familyTree.modal'
 ]).service('breadcrumbs', function () {
         this.title='';
         this.setTitle=function (name) {
             this.title=name;
-        }
+        };
         this.getTitle=function () {
             return this.title;
-        }
+        };
 }).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $routeProvider.when('/home', {
