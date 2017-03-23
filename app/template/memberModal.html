@@ -3,71 +3,76 @@
 </div>
 <div class="modal-body" id="modal-body">
     <div class="row">
-        <span class="col-md-6">
-         <label for="inputFamilyName" class="col-md-3 col-xs-3">FamilyName</label>
-        <div class="col-sm-4 col-xs-4">
-            <input type="text" id="inputFamilyName"  class="form-control" placeholder="FamilyName">
-        </div>
-        </span>
-        <span class="col-md-6">
-                  <label for="inputFirstName" class="col-md-3 col-xs-3">FirstName</label>
-        <div class="col-sm-4 col-xs-4">
-            <input type="text" id="inputFirstName"  class="form-control" placeholder="FirstName">
-        </div>
-        </span>
-    </div>
-
-
-
-    <div class="row">
-        <span class="col-md-6">
-            <label  class="col-md-3 col-xs-3">Gender</label>
-        <div class="col-sm-4 col-xs-4">
-            <input type="radio" name="gender" value="male"> Male<br>
-            <input type="radio" name="gender" value="female"> Female<br>
-        </div>
-        </span>
-        <span class="col-md-6">
-            <label class="col-md-3 col-xs-3">Status</label>
-        <div class="col-sm-4 col-xs-4">
-             <input type="radio" name="gender" value="male"> Live<br>
-             <input type="radio" name="gender" value="female"> Died<br>
-        </div>
-        </span>
-    </div>
-
-    <div class="row">
-        <span class="col-md-8">
-         <label class="col-md-3">RelationShip</label>
-         <div class="col-sm-6 col-xs-6">
-           <select class="form-control">
-                <option>Father</option>
-                 <option>Mother</option>
-                 <option>Couple</option>
-                 <option>Children</option>
-           </select>
-         </div>
-        </span>
-    </div>
-
-    <div class="row">
-        <span class="col-md-6">
-                  <label for="inputBirthPlace" class="col-md-3 col-xs-3">BirthDare</label>
-            <div class="col-md-8 col-xs-8">
-                <p  class="input-group">
-                    <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="modal.popup.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-                    <span class="input-group-btn">
-                     <button type="button" class="btn btn-default" ng-click="modal.open()"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </p>
+        <div class="col-md-6">
+            <label for="inputFamilyName" class="col-sm-4 control-label">姓</label>
+            <div class="col-sm-4 col-xs-4">
+                <input type="text" id="inputFamilyName" placeholder="姓" class="form-control" ng-model="modal.newMember.firstname">
             </div>
-        </span>
-        <span class="col-md-6">
-                  <label for="inputBirthPlace" class="col-md-3 col-xs-3">BirthPlace</label>
-        <div class="col-md-6 col-xs-6">
-            <input type="text" id="inputBirthPlace"  class="form-control" placeholder="BirthPlace">
         </div>
-        </span>
+        <div class="col-md-6">
+            <label for="inputFirstName" class="col-sm-4 control-label">名</label>
+            <div class="col-sm-4 col-xs-4">
+                <input type="text" id="inputFirstName" placeholder="名"  class="form-control"  ng-model="modal.newMember.lastname" >
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="inputGender1" class="col-sm-4 control-label">性别</label>
+            <div class="col-sm-4 col-xs-4">
+                <div>
+                    <input type="radio" name="Gender" id="inputGender1" ng-model="modal.newMember.gender"> 男
+                </div>
+                <div>
+                   <input type="radio" name="Gender" id="inputGender2" ng-model="modal.newMember.gender"> 女
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="inputStatus1" class="col-sm-4 control-labe">状态</label>
+            <div class="col-sm-4 col-xs-4">
+                <div>
+                    <input type="radio" name="inputStatus1" id="inputStatus1"  ng-model="modal.member.status"> 在世
+                </div>
+                <div>
+                    <input type="radio" name="inputStatus1" id="inputStatus2"  ng-model="modal.member.status"> 去世
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <label for="inputBirthDate" class="col-sm-2 control-label">关系</label>
+            <p class="input-group">
+                <select id="inputRelationShip" type="text" class="form-control"  ng-model="modal.member.relative" >
+                    <option ng-repeat="relationShip in modal.relationShipList">
+                        {{relationShip.relative}}
+                    </option>
+                </select>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="inputBirthDate" class="col-sm-4 control-label">出生日期</label>
+            <p class="input-group">
+                <input id="inputBirthDate" type="text" class="form-control" uib-datepicker-popup ng-model="modal.member.birthday" is-open="modal.popup.opened" datepicker-options="modal.dateOptions" ng-required="true" close-text="Close" />
+                <span class="input-group-btn">
+                   <button type="button" class="btn btn-default" ng-click="modal.open()"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <label for="inputBirthPlace" class="col-sm-4 control-label col-xs-2">出生地</label>
+            <div class="col-sm-4 col-xs-4">
+                <input type="text" id="inputBirthPlace" placeholder="出生地"  class="form-control" ng-model="modal.member.birthplace">
+            </div>
+        </div>
     </div>
 </div>
 <div class="modal-footer">

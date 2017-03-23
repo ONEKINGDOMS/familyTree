@@ -238,10 +238,6 @@ input[type="checkbox"].ios8-switch-lg:checked + label:after {
 }
 
 
-.modal-body>.row{
-    margin: 10px;
-}
-
-label{
-    padding-top:5px;
+.modal-body> .row{
+    margin: 20px;
 }
