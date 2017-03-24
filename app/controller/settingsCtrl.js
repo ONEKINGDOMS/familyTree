@@ -9,7 +9,7 @@
 
             settingsCtrl.prototype.init=function(){
                 var that=this;
-                breadcrumbs.setTitle('Setting');
+                breadcrumbs.setTitle('设置');
             };
 
             //change Found status

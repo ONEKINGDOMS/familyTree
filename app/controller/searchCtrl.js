@@ -10,7 +10,7 @@ angular.module('familyTree.search', ['ngRoute'])
 
         searchCtrl.prototype.init=function () {
             var that=this;
-            breadcrumbs.setTitle('Search');
+            breadcrumbs.setTitle('寻找人脉');
             that.searchBy=$location.search().searchBy;
         }
 

@@ -11,7 +11,7 @@
 
             familyCtrl.prototype.init = function () {
                 var that = this;
-                breadcrumbs.setTitle('Family');
+                breadcrumbs.setTitle('家族');
                 // that.user = {
                 //     name: 'Liu',
                 //     relatives:[

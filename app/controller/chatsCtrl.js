@@ -10,7 +10,7 @@ angular.module('familyTree.chats', ['ngRoute'])
 
         chatsCtrl.prototype.init=function () {
             var that=this;
-            breadcrumbs.setTitle('Chats');
+            breadcrumbs.setTitle('消息');
             that.sessionList=[{
                 id:'1',
                 user:{

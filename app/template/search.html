@@ -1,11 +1,9 @@
 <div ng-controller="searchCtrl as search">
     <ftree-header></ftree-header>
-    <div class="title">
-        <span>{{title}}</span>
-    </div>
     <div class="row">
-        {{terms}}
+        {{search.terms}}
     </div>
+
     <div class="row" ng-if="search.searchBy == 0" class="searchFrom">
         <div class="form-group col-sm-8  col-sm-offset-2">
             <label for="inputHomeTown" class="col-sm-5 control-label">Home Town:</label>
@@ -43,7 +41,7 @@
         </div>
     </div>
 
-    <div class="row content">
+    <div class="row content" ng-if="search.shouldShowSearch">
         <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5 text">
             <a class="btn btn-warning btn-block">
                Search

@@ -122,8 +122,7 @@ body {
 
 
 .content{
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     padding: 20px;
 }
 
@@ -238,6 +237,10 @@ input[type="checkbox"].ios8-switch-lg:checked + label:after {
 }
 
 
-.modal-body> .row{
-    margin: 20px;
+/*.modal-body> .row{*/
+    /*margin: 20px;*/
+/*}*/
+
+.row>label{
+    margin: 15px;
 }

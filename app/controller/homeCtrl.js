@@ -10,7 +10,7 @@ angular.module('familyTree.home',[])
 
     homeCtrl.prototype.init=function () {
         var that=this;
-        breadcrumbs.setTitle('Home');
+        breadcrumbs.setTitle('首页');
     }
 
 

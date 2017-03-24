@@ -10,7 +10,7 @@ angular.module('familyTree.friends', ['ngRoute'])
 
         friendsCtrl.prototype.init=function(){
             var that=this;
-            breadcrumbs.setTitle('Friends');
+            breadcrumbs.setTitle('人脉邀请');
             that.friendList=[{
                 id:'1',
                 name:'Uen Yu',

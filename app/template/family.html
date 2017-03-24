@@ -19,10 +19,10 @@
         <ul class="nav nav-list">
             <li>
                 <ul class="nav nav-list tree">
-                    <li>Father:{{family.user.father.name}}</li>
-                    <li>Monther:{{family.user.mother.name}}</li>
-                    <li>Couple:{{family.user.couple.name}}
-                    <li>Childrens:
+                    <li>父亲:{{family.user.father.name}}</li>
+                    <li>母亲:{{family.user.mother.name}}</li>
+                    <li>配偶:{{family.user.couple.name}}
+                    <li>子女:
                                 <ul class="nav nav-list tree">
                                     <li ng-repeat="children in family.user.childrens">{{child.name}}</li>
                                 </ul></li>
