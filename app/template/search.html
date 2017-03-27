@@ -1,50 +1,66 @@
 <div ng-controller="searchCtrl as search">
     <ftree-header></ftree-header>
-    <div class="row">
+    <div class="row text" style="background: lightgray">
         {{search.terms}}
     </div>
 
-    <div class="row" ng-if="search.searchBy == 0" class="searchFrom">
+    <div class="row" ng-if="search.searchByFamily" class="searchFrom">
         <div class="form-group col-sm-8  col-sm-offset-2">
-            <label for="inputHomeTown" class="col-sm-5 control-label">Home Town:</label>
+            <label for="inputHomeTown" class="col-sm-5 control-label">您的祖籍/出生地:</label>
             <div class="col-sm-7">
                 <input type="textbox" class="form-control" id="inputHomeTown" >
             </div>
-            <label for="inputTitle" class="col-sm-5 control-label">xxx:</label>
+            <label for="inputTitle" class="col-sm-5 control-label">您的职业:</label>
             <div class="col-sm-7">
                 <input type="textbox" class="form-control" id="inputTitle" >
             </div>
-            <label for="inputRole" class="col-sm-5 control-label">xxx:</label>
+            <label for="inputRole" class="col-sm-5 control-label">您的职业头衔:</label>
             <div class="col-sm-7">
                 <input type="textbox" class="form-control" id="inputRole" >
             </div>
-            <label for="inputSearchTitle" class="col-sm-5 control-label">xxx:</label>
+            <label for="inputSearchTitle" class="col-sm-5 control-label">寻找人脉目标职业:</label>
             <div class="col-sm-7">
                 <input type="textbox" class="form-control" id="inputSearchTitle" >
             </div>
         </div>
     </div>
-    <div class="row" ng-if="search.searchBy == 1" class="searchFrom">
+    <div class="row" ng-if="search.searchBySchool" class="searchFrom">
         <div class="form-group col-sm-8  col-sm-offset-2">
-            <label for="inputSchoolType" class="col-sm-5 control-label">School Type:</label>
+            <label for="inputSchoolType" class="col-sm-5 control-label">学校类型:</label>
             <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputSchoolType" placeholder="primary/junior high/seinor high">
+                <input type="textbox" class="form-control" id="inputSchoolType" placeholder="小学/中学/大学h">
             </div>
-            <label for="inputSchoolAddress" class="col-sm-5 control-label">School Address:</label>
+            <label for="inputSchoolAddress" class="col-sm-5 control-label">学校所在地:</label>
             <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputSchoolAddress" placeholder="primary/junior high/seinor high">
+                <input type="textbox" class="form-control" id="inputSchoolAddress">
             </div>
-            <label for="inputSchoolName" class="col-sm-5 control-label">School name:</label>
+            <label for="inputSchoolName" class="col-sm-5 control-label">学校名字:</label>
             <div class="col-sm-7">
-                <input type="textbox" class="form-control" id="inputSchoolName" placeholder="primary/junior high/seinor high">
+                <input type="textbox" class="form-control" id="inputSchoolName">
             </div>
         </div>
     </div>
 
-    <div class="row content" ng-if="search.shouldShowSearch">
+    <div class="row content"  ng-if="search.shouldShowType == 0">
         <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5 text">
-            <a class="btn btn-warning btn-block">
-               Search
+            <a class="btn btn-warning btn-block" ng-click="search.search()">
+                搜索
+            </a>
+        </div>
+    </div>
+
+    <div class="row content"  ng-if="search.shouldShowType == 1">
+        <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5 text">
+            <a class="btn btn-warning btn-block" ng-click="search.showSearch(0)">
+                 搜索家族人脉
+            </a>
+        </div>
+    </div>
+
+    <div class="row content"  ng-if="search.shouldShowType == 1">
+        <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-2 col-xs-offset-5 text">
+            <a class="btn btn-warning btn-block" ng-click="search.showSearch(1)">
+                搜索校友
             </a>
         </div>
     </div>
