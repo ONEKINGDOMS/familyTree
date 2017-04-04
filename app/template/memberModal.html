@@ -6,13 +6,13 @@
         <div class="col-md-6">
             <label for="inputFamilyName" class="col-sm-4 control-label">姓</label>
             <div class="col-sm-4 col-xs-4">
-                <input type="text" id="inputFamilyName" placeholder="姓" class="form-control" ng-model="modal.newMember.firstname">
+                <input type="text" id="inputFamilyName" placeholder="姓" class="form-control" ng-model="modal.newMember.firstname" required>
             </div>
         </div>
         <div class="col-md-6">
             <label for="inputFirstName" class="col-sm-4 control-label">名</label>
             <div class="col-sm-4 col-xs-4">
-                <input type="text" id="inputFirstName" placeholder="名"  class="form-control"  ng-model="modal.newMember.lastname" >
+                <input type="text" id="inputFirstName" placeholder="名"  class="form-control"  ng-model="modal.newMember.lastname"  required>
             </div>
         </div>
     </div>
@@ -34,10 +34,10 @@
             <label for="inputStatus1" class="col-sm-4 control-labe">状态</label>
             <div class="col-sm-4 col-xs-4">
                 <div>
-                    <input type="radio" name="inputStatus1" id="inputStatus1"  ng-model="modal.member.status"> 在世
+                    <input type="radio" name="inputStatus1" id="inputStatus1"  ng-model="modal.newMember.status"> 在世
                 </div>
                 <div>
-                    <input type="radio" name="inputStatus1" id="inputStatus2"  ng-model="modal.member.status"> 去世
+                    <input type="radio" name="inputStatus1" id="inputStatus2"  ng-model="modal.newMember.status"> 去世
                 </div>
 
             </div>
@@ -48,10 +48,7 @@
         <div class="col-md-12">
             <label for="inputBirthDate" class="col-sm-2 control-label">关系</label>
             <p class="input-group">
-                <select id="inputRelationShip" type="text" class="form-control"  ng-model="modal.member.relative" >
-                    <option ng-repeat="relationShip in modal.relationShipList">
-                        {{relationShip.relative}}
-                    </option>
+                <select id="inputRelationShip" type="text" class="form-control"  ng-model="modal.newMember.relative"  ng-options="relationShip.relative for relationShip in modal.relationShipList">
                 </select>
             </p>
         </div>
@@ -61,7 +58,7 @@
         <div class="col-md-6">
             <label for="inputBirthDate" class="col-sm-4 control-label">出生日期</label>
             <p class="input-group">
-                <input id="inputBirthDate" type="text" class="form-control" uib-datepicker-popup ng-model="modal.member.birthday" is-open="modal.popup.opened" datepicker-options="modal.dateOptions" ng-required="true" close-text="Close" />
+                <input id="inputBirthDate" type="text" class="form-control" uib-datepicker-popup ng-model="modal.newMember.birthday" is-open="modal.popup.opened" datepicker-options="modal.dateOptions" ng-required="true" close-text="Close" />
                 <span class="input-group-btn">
                    <button type="button" class="btn btn-default" ng-click="modal.open()"><i class="glyphicon glyphicon-calendar"></i></button>
                 </span>
@@ -70,12 +67,12 @@
         <div class="col-md-6">
             <label for="inputBirthPlace" class="col-sm-4 control-label col-xs-2">出生地</label>
             <div class="col-sm-4 col-xs-4">
-                <input type="text" id="inputBirthPlace" placeholder="出生地"  class="form-control" ng-model="modal.member.birthplace">
+                <input type="text" id="inputBirthPlace" placeholder="出生地"  class="form-control" ng-model="modal.newMember.birthplace">
             </div>
         </div>
     </div>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click="modal.confirm()">OK</button>
     <button class="btn btn-warning" type="button"  ng-click="modal.cancel()">Cancel</button>
+    <button class="btn btn-primary" type="button" ng-click="modal.confirm()">OK</button>
 </div>

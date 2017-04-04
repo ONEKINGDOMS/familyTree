@@ -8,39 +8,43 @@ angular.module('familyTree.modal', ['ngRoute'])
             that.user=user;
             that.popup={};
             that.staticRelationShipList=[{
-                relativeType:'父亲'
+                id:'1',
+                relative:'父亲'
             },{
+                id:'2',
                 relative:'母亲'
             },{
+                id:'3',
                 relative:'配偶'
             },{
+                id:'4',
                 relative:'子女'
             }];
 
 
             that.relationShipList=_.reduce(that.staticRelationShipList,function (array,item) {
-                var find=_.find(that.user.relatives,item);
-                if(find === undefined)
+                var result=that.user._checkIsExistingRelationship({"relative":item.relative});
+                if(result)
                 {
                     array.push(item);
                 }
                 return array;
-            },[])
-
+            },[]);
         };
 
         modalCtrl.prototype.confirm=function () {
-           if(this.member)
+           if(this.newMember.firstname && this.newMember.lastname)
            {
-               this.member.relative=this.member.relative.replace(/\s+/, "");
-               this.user.addNewMember(this.member);
+               this.newMember.relative=this.newMember.relative.relative;
+               this.newMember.name=this.newMember.firstname+' '+this.newMember.lastname;
+               this.user.addNewMember(this.newMember);
                $uibModalInstance.dismiss('cancel');
            }
-        }
+        };
         
         modalCtrl.prototype.cancel=function () {
             $uibModalInstance.dismiss('cancel');
-        }
+        };
 
         modalCtrl.prototype.dateOptions = {
             dateDisabled: disabled,

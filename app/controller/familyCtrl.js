@@ -12,19 +12,6 @@
             familyCtrl.prototype.init = function () {
                 var that = this;
                 breadcrumbs.setTitle('家族');
-                // that.user = {
-                //     name: 'Liu',
-                //     relatives:[
-                //         {
-                //             id:'1',
-                //             relative:'父亲',
-                //             firstname:'Liu',
-                //             lastname:'feng',
-                //             birthdate:'1960-10-1',
-                //             status:'live'
-                //         }
-                //     ]
-                // };
                 that.user=new user();
             };
 
@@ -41,7 +28,12 @@
                     }
                 ];
                 this.setFamily();
-            }
+            };
+
+            user.prototype._checkIsExistingRelationship=function (relativeType) {
+                var find=_.find(this.relatives,relativeType);
+                return find === undefined;
+            };
 
             user.prototype.setFamily=function () {
                 this.father=_.find(this.relatives,{ relative:'父亲'});
@@ -56,10 +48,6 @@
                 this.relatives.push(member);
                 this.setFamily();
             }
-
-
-
-
 
 
             familyCtrl.prototype.addNewMember = function () {
